@@ -49,6 +49,24 @@ The Services page presents tourism-related services and information in a clear c
 ### 5. Contact Page
 The Contact page provides contact information and a message form for visitors who want to make inquiries. The form requires FormSubmit configuration before it can receive messages.
 
+## TourSalone  Screenshots
+
+### Home Page
+![index Page](index.png)
+
+### Explore Page
+![Explore Page](explore.png)
+
+### About Page
+![About Page](about.png)
+
+### Services Page
+![Services Page](services.png)
+
+### Contact Page
+![Contact Page](contact.png)
+
+
 ## Featured Tourist Destinations
 
 Some destinations included in the website are:
