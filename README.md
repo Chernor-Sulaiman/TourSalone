@@ -53,7 +53,7 @@ The Contact page provides contact information and a message form for visitors wh
 ## TourSalone Screenshots
 
 ### 1. Home Page
-![TourSalone Home Page](screenshot/home.png)
+![TourSalone Index Page](screenshot/index.png)
 
 ### 2. Explore Page
 ![TourSalone Explore Page](screenshot/explore.png)
