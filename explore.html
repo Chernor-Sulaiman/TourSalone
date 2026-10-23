@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explore Sierra Leone | TourSalone</title>
+
+  <!-- This font is used throughout our website. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Navigation Header -->
+  <header>
+    <div class="container navbar">
+
+      <a class="logo" href="index.html">TOURSALONE</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="explore.html" aria-current="page">Explore</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+
+    <section class="explore-section">
+
+      <div class="container explore-layout">
+
+
+        <!-- FILTER SIDEBAR -->
+
+        <aside class="sidebar">
+
+          <h2 class="filter-title">Browse by Category</h2>
+
+          <div class="filter-group">
+
+            <label>
+              <input type="radio" name="category" id="cat-all" checked>
+              All Categories
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="cat-beaches">
+              Beaches
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="cat-wildlife">
+              Nature &amp; Wildlife
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="cat-history">
+              History
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="cat-culture">
+              Culture
+            </label>
+
+            <label>
+              <input type="radio" name="category" id="cat-adventure">
+              Adventure &amp; Activities
+            </label>
+
+          </div>
+
+
+          <h2 class="filter-title">Browse by Location</h2>
+
+          <div class="filter-group">
+
+            <label>
+              <input type="radio" name="location" id="loc-all" checked>
+              All Locations
+            </label>
+
+            <label>
+              <input type="radio" name="location" id="loc-western">
+              Western Area
+            </label>
+
+            <label>
+              <input type="radio" name="location" id="loc-northern">
+              Northern Region
+            </label>
+
+            <label>
+              <input type="radio" name="location" id="loc-southern">
+              Southern Region
+            </label>
+
+            <label>
+              <input type="radio" name="location" id="loc-eastern">
+              Eastern Region
+            </label>
+
+          </div>
+
+          <!-- Reloading Explore clears the selected filters. -->
+          <a href="explore.html" class="filter-reset">
+            View All Destinations
+          </a>
+
+        </aside>
+
+
+        <!-- MAIN DESTINATION AREA -->
+        <div class="explore-content">
+
+          <h1 class="explore-page-title">Explore Sierra Leone</h1>
+
+          <p class="explore-subtitle">
+            Discover some of the beautiful places worth
+            visiting across Sierra Leone.
+          </p>
+
+          <!-- These IDs connect the category links on
+               our homepage to the Explore page. -->
+          <div class="category-anchors" aria-hidden="true">
+            <span id="beaches"></span>
+            <span id="wildlife"></span>
+            <span id="history"></span>
+            <span id="culture"></span>
+            <span id="adventure"></span>
+          </div>
+
+
+          <!-- Destination . -->
+          <div class="destination-grid">
+
+            <!-- DESTINATION 1: TOKEH BEACH -->
+            <article class="destination-card" id="tokeh-beach" data-category="beaches" data-location="western">
+
+              <img src="images/token-beach.jpg" alt="Tokeh Beach in Sierra Leone" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Tokeh Beach</h3>
+                <p>Western Area</p>
+
+                <a href="#tokeh-details">Learn More →</a>
+              </div>
+
+            </article>
+
+
+            <!-- DESTINATION 2: BUNCE ISLAND -->
+            <article class="destination-card" id="bunce-island" data-category="history" data-location="northern">
+
+              <img src="images/bunce-island.jpg" alt="Historic Bunce Island" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Bunce Island</h3>
+                <p>Sierra Leone River</p>
+
+                <a href="#bunce-details">Learn More →</a>
+              </div>
+
+            </article>
+
+
+            <!-- DESTINATION 3: NUMBER TWO BEACH -->
+            <article class="destination-card" id="river-number-two" data-category="beaches" data-location="western">
+
+              <img src="images/number2.jpg" alt="River Number Two Beach" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Number 2 Beach</h3>
+                <p>Western Area</p>
+
+                <a href="#river-details">Learn More →</a>
+              </div>
+
+            </article>
+
+
+            <!-- DESTINATION 4: TACUGAMA -->
+            <article class="destination-card" id="tacugama" data-category="wildlife" data-location="western">
+
+              <img src="images/tacugama.jpg" alt="Tacugama Chimpanzee Sanctuary" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Tacugama Sanctuary</h3>
+                <p>Western Area</p>
+
+                <a href="#tacugama-details">Learn More →</a>
+              </div>
+
+            </article>
+
+
+            <!-- DESTINATION 5: BANANA ISLANDS -->
+            <article class="destination-card" id="banana-islands" data-category="beaches adventure history"
+              data-location="western">
+
+              <img src="images/banana-island.jpg" alt="Banana Islands coastline" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Banana Islands</h3>
+                <p>Western Area</p>
+
+                <a href="#banana-details">Learn More →</a>
+              </div>
+
+            </article>
+
+
+            <!--  LOMA MOUNTAINS -->
+            <article class="destination-card" id="loma-mountains" data-category="wildlife adventure"
+              data-location="northern">
+
+              <img src="images/loma-mountain.jpg" alt="Loma Mountains in Sierra Leone" loading="lazy">
+
+              <div class="destination-info">
+                <h3>Loma Mountains</h3>
+                <p>Northern Sierra Leone</p>
+
+                <a href="#loma-details">Learn More →</a>
+              </div>
+
+            </article>
+
+          </div>
+
+          <!-- This message appears for the empty Culture category, or when no location matches. -->
+          <div class="no-results">
+            <h3>No destinations found</h3>
+            <p>Try choosing another category or location.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DESTINATION DETAILS -->
+
+    <section class="destination-details-section">
+      <div class="container">
+
+        <h2 class="section-title">Learn More About Our Destinations</h2>
+
+        <div class="details-grid">
+
+          <article class="detail-box" id="tokeh-details">
+            <h3>Tokeh Beach</h3>
+            <p>
+              Tokeh Beach is known for its beautiful sand,
+              ocean views and relaxing coastal atmosphere.
+            </p>
+          </article>
+
+          <article class="detail-box" id="bunce-details">
+            <h3>Bunce Island</h3>
+            <p>
+              Bunce Island is an important historical site
+              connected to the transatlantic slave trade.
+            </p>
+          </article>
+
+          <article class="detail-box" id="river-details">
+            <h3>River Number Two Beach</h3>
+            <p>
+              River Number Two Beach is a peaceful coastal
+              destination known for its white sand and water.
+            </p>
+          </article>
+
+          <article class="detail-box" id="tacugama-details">
+            <h3>Tacugama Sanctuary</h3>
+            <p>
+              Tacugama helps protect rescued chimpanzees
+              and teaches visitors about conservation.
+            </p>
+          </article>
+
+          <article class="detail-box" id="banana-details">
+            <h3>Banana Islands</h3>
+            <p>
+              The Banana Islands offer coastal scenery,
+              island communities and historical interest.
+            </p>
+          </article>
+
+          <article class="detail-box" id="loma-details">
+            <h3>Loma Mountains</h3>
+            <p>
+              The Loma Mountains are known for their
+              natural scenery and highland landscapes.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container explore-footer-grid">
+
+      <div>
+        <strong>TourSalone</strong>
+        <p class="footer-note">
+          © 2026 TourSalone
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Follow Us</strong>
+        <span class="footer-note">Social links coming soon</span>
+      </div>
+
+      <div class="newsletter">
+        <strong>Newsletter</strong>
+        <p class="footer-note">Travel updates coming soon.</p>
+
+        <input type="email" placeholder="Your email" aria-label="Newsletter email" disabled>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

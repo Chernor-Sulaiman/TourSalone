@@ -1,0 +1,1302 @@
+/* WEBSITE COLOURS */
+
+:root {
+  --primary: #126b53;
+  --primary-dark: #084735;
+  --accent: #f2ba55;
+  --background: #f5f7f3;
+  --white: #ffffff;
+  --text: #23352d;
+  --muted: #69766f;
+  --border: #e3eae5;
+  --shadow: 0 12px 35px rgba(10, 57, 40, 0.08);
+  --radius: 16px;
+}
+
+
+/* BASIC PAGE SETTINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+main {
+  min-height: 70vh;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+
+h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+h3 {
+  font-size: 19px;
+}
+
+p {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.section-title {
+  color: var(--primary-dark);
+  margin-bottom: 22px;
+}
+
+[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Make keyboard navigation easier to follow. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* HEADER AND NAVIGATION */
+
+header {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.logo::first-letter {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+nav a {
+  position: relative;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+}
+
+/* Highlight the page the visitor is viewing. */
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #183c2c;
+  border: none;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+
+/*   HOME PAGE - HERO SECTION  The welcome message is on the left.
+   The large tourism photograph is on the right.
+    */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  min-height: 520px;
+  padding: 0;
+  background: #eaf3ed;
+}
+
+.hero-text {
+  padding: 70px max(35px, calc((100vw - 1180px) / 2));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  color: var(--primary-dark);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 17px;
+  max-width: 420px;
+  margin-bottom: 26px;
+}
+
+.hero-image {
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/*HOME PAGE - CATEGORIES Visitors can choose what kind of destination they want to explore. */
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.category-link {
+  display: inline-block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-link:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+
+/* FEATURED DESTINATIONS */
+
+.featured-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.featured-heading .section-title {
+  margin-bottom: 0;
+}
+
+.view-all {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* Three destination cards in one row on desktop. */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.destination-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(10, 57, 40, 0.15);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.destination-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 23px;
+}
+
+.destination-info h3 {
+  color: var(--primary-dark);
+  margin-bottom: 9px;
+}
+
+.destination-info p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+
+.destination-info a {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.destination-info a:hover {
+  color: #b47c18;
+  text-decoration: underline;
+}
+
+
+/* EXPLORE PAGE   The filters appear on the left. Destinations appear on the right.*/
+
+.explore-section {
+  padding: 55px 0 75px;
+}
+
+.explore-intro {
+  padding-bottom: 20px;
+}
+
+.explore-intro h1,
+.explore-page-title {
+  color: var(--primary-dark);
+}
+
+.explore-intro p {
+  max-width: 700px;
+}
+
+.explore-subtitle {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.explore-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+
+/* FILTER SIDEBAR */
+
+.sidebar {
+  background: var(--white);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.filter-title {
+  color: var(--primary-dark);
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.filter-group {
+  margin-bottom: 28px;
+}
+
+.filter-group h3,
+.sidebar legend {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.sidebar fieldset {
+  border: none;
+  min-width: 0;
+}
+
+.sidebar .filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.sidebar input[type="radio"],
+.sidebar input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+
+.filter-reset {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.filter-reset:hover {
+  text-decoration: underline;
+}
+
+
+/* EXPLORE DESTINATION CARDS */
+
+.explore-content {
+  min-width: 0;
+}
+
+.explore-content h2 {
+  color: var(--primary-dark);
+  margin-bottom: 26px;
+}
+
+.explore-content .destination-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.explore-content .destination-card img {
+  height: 170px;
+}
+
+.explore-content .destination-info {
+  padding: 16px;
+}
+
+.explore-content .destination-info h3 {
+  font-size: 16px;
+}
+
+.explore-content .destination-info p {
+  font-size: 12px;
+}
+
+.explore-content .destination-card:target {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.category-anchors {
+  height: 0;
+  overflow: visible;
+}
+
+.category-anchors span {
+  display: block;
+  height: 0;
+  scroll-margin-top: 130px;
+}
+
+.destination-category {
+  display: inline-block;
+  align-self: flex-start;
+  background: #eaf3ed;
+  color: var(--primary);
+  padding: 5px 12px;
+  margin-bottom: 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.destination-description {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.no-results {
+  display: none;
+  background: var(--white);
+  padding: 25px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+
+
+/* Filter destinations by category. */
+
+.explore-layout:has(#cat-beaches:checked) .destination-card:not([data-category~="beaches"]) {
+  display: none;
+}
+
+.explore-layout:has(#cat-wildlife:checked) .destination-card:not([data-category~="wildlife"]) {
+  display: none;
+}
+
+.explore-layout:has(#cat-history:checked) .destination-card:not([data-category~="history"]) {
+  display: none;
+}
+
+.explore-layout:has(#cat-culture:checked) .destination-card:not([data-category~="culture"]) {
+  display: none;
+}
+
+.explore-layout:has(#cat-adventure:checked) .destination-card:not([data-category~="adventure"]) {
+  display: none;
+}
+
+
+/* Filter destinations by location. */
+
+.explore-layout:has(#loc-western:checked) .destination-card:not([data-location="western"]) {
+  display: none;
+}
+
+.explore-layout:has(#loc-northern:checked) .destination-card:not([data-location="northern"]) {
+  display: none;
+}
+
+.explore-layout:has(#loc-southern:checked) .destination-card:not([data-location="southern"]) {
+  display: none;
+}
+
+.explore-layout:has(#loc-eastern:checked) .destination-card:not([data-location="eastern"]) {
+  display: none;
+}
+
+
+/* Category links from the Home page. */
+
+body:has(#beaches:target):has(#cat-all:checked) .destination-card:not([data-category~="beaches"]) {
+  display: none;
+}
+
+body:has(#wildlife:target):has(#cat-all:checked) .destination-card:not([data-category~="wildlife"]) {
+  display: none;
+}
+
+body:has(#history:target):has(#cat-all:checked) .destination-card:not([data-category~="history"]) {
+  display: none;
+}
+
+body:has(#culture:target):has(#cat-all:checked) .destination-card:not([data-category~="culture"]) {
+  display: none;
+}
+
+body:has(#adventure:target):has(#cat-all:checked) .destination-card:not([data-category~="adventure"]) {
+  display: none;
+}
+
+/* Show a message if there are no culture cards yet. */
+.explore-layout:has(#cat-culture:checked) .no-results,
+body:has(#culture:target):has(#cat-all:checked) .no-results {
+  display: block;
+}
+
+
+/* DESTINATION DETAILS */
+
+.destination-details-section {
+  background: #eaf3ed;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.detail-box {
+  background: var(--white);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.detail-box h3 {
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.detail-box p {
+  font-size: 13px;
+}
+
+.detail-box:target {
+  outline: 3px solid var(--accent);
+}
+
+
+/*  SERVICES PAGE */
+
+.services-intro {
+  padding: 65px 0 20px;
+  text-align: center;
+}
+
+.services-intro h1 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.services-intro p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.services-section {
+  padding-top: 35px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  min-height: 185px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+}
+
+.service-card h3 {
+  color: var(--primary-dark);
+}
+
+.service-card p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 15px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.service-link:hover {
+  color: #b47c18;
+  text-decoration: underline;
+}
+
+
+/* ABOUT PAGE */
+
+.about-intro {
+  text-align: center;
+  padding: 70px 0 10px;
+}
+
+.about-intro h1 {
+  color: var(--primary-dark);
+}
+
+.about-intro p {
+  font-size: 17px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 45px;
+  align-items: center;
+}
+
+.about-layout img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.about-layout h2 {
+  color: var(--primary-dark);
+}
+
+.mission-grid,
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.mission-box {
+  background: var(--white);
+  padding: 35px 20px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.reason-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.reason-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.reason-card h3 {
+  padding: 20px;
+  color: var(--primary-dark);
+}
+
+
+/* CONTACT PAGE */
+
+.contact-wireframe-section {
+  padding: 65px 0 90px;
+  min-height: 650px;
+}
+
+.contact-wireframe-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 65px;
+  align-items: start;
+}
+
+
+/* LEFT SIDE - CONTACT INFORMATION */
+
+.contact-wireframe-info {
+  padding-top: 20px;
+}
+
+.contact-wireframe-info h1 {
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+}
+
+.contact-wireframe-description {
+  max-width: 420px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-wireframe-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-wireframe-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eaf3ed;
+  color: var(--primary);
+  font-size: 25px;
+}
+
+.contact-wireframe-item h3 {
+  color: var(--primary-dark);
+  font-size: 16px;
+}
+
+.contact-wireframe-item p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+
+/* RIGHT SIDE - CONTACT FORM */
+
+.contact-wireframe-form-box {
+  background: var(--white);
+  padding: 30px 35px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-wireframe-form-box h2 {
+  color: var(--primary-dark);
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.contact-wireframe-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Rounded input fields based on the wireframe. */
+
+.contact-wireframe-form input:not([type="hidden"]),
+.contact-wireframe-form select,
+.contact-wireframe-form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #d6e2da;
+  border-radius: 12px;
+  background: #fbfdfb;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.contact-wireframe-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* Highlight the field the visitor is using. */
+
+.contact-wireframe-form input:focus,
+.contact-wireframe-form select:focus,
+.contact-wireframe-form textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Keep the Send Message button in the centre. */
+
+.contact-send-btn {
+  display: block;
+  min-width: 200px;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+
+/* Support older Contact page class names too. */
+
+.contact-intro {
+  padding: 65px 0 20px;
+  text-align: center;
+}
+
+.contact-intro h1 {
+  color: var(--primary-dark);
+}
+
+.contact-intro p {
+  max-width: 700px;
+  margin: 15px auto 0;
+}
+
+.contact-section {
+  padding-top: 35px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-details,
+.contact-form-box {
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-details h2,
+.contact-form-box h2 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  margin: 25px 0;
+}
+
+.contact-item h3 {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-form input:not([type="hidden"]),
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fafcfb;
+  color: var(--text);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  cursor: pointer;
+}
+
+.form-note {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: #092e24;
+  color: var(--white);
+  padding: 55px 0 35px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 45px;
+}
+
+.explore-footer-grid,
+.services-footer-grid,
+.contact-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+footer strong {
+  color: var(--white);
+  font-size: 17px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #d6e4dc;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-note {
+  color: #b9cec2;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 13px 15px;
+  margin-top: 12px;
+  border: 1px solid #527566;
+  border-radius: 7px;
+  background: #164535;
+  color: var(--white);
+}
+
+.newsletter input::placeholder {
+  color: #b9cec2;
+}
+
+
+/*
+   RESPONSIVE DESIGN*/
+
+
+/* SMALL DESKTOPS */
+
+@media (max-width: 1100px) {
+
+  .explore-content .destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+  .explore-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card {
+    grid-template-columns: minmax(0, 1fr) 120px;
+  }
+
+  .hero-text {
+    padding: 55px 7%;
+  }
+
+  .contact-wireframe-layout {
+    gap: 30px;
+  }
+
+  .contact-wireframe-form-box {
+    padding: 25px;
+  }
+
+}
+
+
+/* SMALL TABLETS */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    min-height: auto;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .home-hero,
+  .about-layout,
+  .contact-layout,
+  .contact-wireframe-layout,
+  .services-grid,
+  .explore-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    padding: 55px 7%;
+  }
+
+  .hero-image img {
+    height: 340px;
+    min-height: 0;
+  }
+
+  .category-row {
+    justify-content: center;
+  }
+
+  .sidebar {
+    padding: 22px;
+  }
+
+  .mission-grid,
+  .reasons-grid,
+  .footer-grid,
+  .explore-footer-grid,
+  .services-footer-grid,
+  .contact-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .home-hero {
+    padding: 0;
+  }
+
+  .contact-wireframe-section {
+    min-height: auto;
+    padding: 45px 0 65px;
+  }
+
+  .contact-wireframe-info {
+    padding-top: 0;
+  }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 520px) {
+
+  nav {
+    gap: 10px 16px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .hero-text {
+    padding: 42px 6%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(32px, 9vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+
+  .category-link {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .destination-grid,
+  .explore-content .destination-grid,
+  .details-grid,
+  .mission-grid,
+  .reasons-grid,
+  .footer-grid,
+  .explore-footer-grid,
+  .services-footer-grid,
+  .contact-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-content .destination-card img {
+    height: 220px;
+  }
+
+  .explore-content .destination-info {
+    padding: 20px;
+  }
+
+  .featured-heading {
+    align-items: flex-start;
+  }
+
+  .service-card {
+    grid-template-columns: minmax(0, 1fr) 110px;
+  }
+
+  .contact-wireframe-info h1 {
+    font-size: 34px;
+  }
+
+  .contact-wireframe-form-box {
+    padding: 22px;
+  }
+
+  .contact-wireframe-form-box h2 {
+    font-size: 23px;
+  }
+
+  .contact-details,
+  .contact-form-box {
+    padding: 24px;
+  }
+
+  .services-intro {
+    padding: 45px 0 15px;
+  }
+
+  footer {
+    padding: 40px 0 28px;
+  }
+
+}
+
+
+/* Reduce movement for visitors who prefer it. */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TourSalone | Discover Sierra Leone</title>
+
+  <!-- We use Poppins to give the website a clean, modern look. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!--  NAVIGATION HEADER-->
+
+  <header>
+    <div class="container navbar">
+
+      <a class="logo" href="index.html">
+        TOURSALONE
+      </a>
+
+      <nav aria-label="Main navigation">
+
+        <a class="active" href="index.html" aria-current="page">
+          Home
+        </a>
+
+        <a href="explore.html">
+          Explore
+        </a>
+
+        <a href="about.html">
+          About us
+        </a>
+
+        <a href="services.html">
+          Services</a>
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Everything between main tags is the main
+       information visitors came to see. -->
+  <main>
+
+    <!-- HOME HERO SECTION-->
+
+    <section class="home-hero" aria-labelledby="hero-title">
+
+      <div class="hero-text">
+
+        <h1 id="hero-title">
+          Discover Sierra Leone
+        </h1>
+
+        <p>
+          Discover. Explore. Experience Sierra Leone.
+          Find beautiful beaches, exciting wildlife,
+          rich culture and unforgettable destinations.
+        </p>
+
+        <!-- This button opens our Explore page. -->
+        <a class="btn" href="explore.html">
+          Explore Now →
+        </a>
+
+      </div>
+
+      <!-- hero image. -->
+      <div class="hero-image">
+
+        <img src="images/number2.jpg" >
+
+      </div>
+
+    </section>
+
+
+    <!--  EXPLORE BY CATEGORY-->
+
+    <section class="categories-section" aria-labelledby="category-title">
+
+      <div class="container">
+
+        <h2 class="section-title" id="category-title">
+          Explore by Category
+        </h2>
+
+        <div class="category-row">
+
+          <!-- Each category points to its matching
+               section on the Explore page. -->
+
+          <a class="category-link" href="explore.html#beaches">
+            Beaches
+          </a>
+
+          <a class="category-link" href="explore.html#wildlife">
+            Nature &amp; Wildlife
+          </a>
+
+          <a class="category-link" href="explore.html#history">
+            Historical Sites
+          </a>
+
+          <a class="category-link" href="explore.html#culture">
+            Culture &amp; Festivals
+          </a>
+
+          <a class="category-link" href="explore.html#adventure">
+            Adventure &amp; Activities
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FEATURED DESTINATIONS-->
+
+    <section class="featured-section" aria-labelledby="featured-title">
+
+      <div class="container">
+        <div class="featured-heading">
+
+          <h2 class="section-title" id="featured-title">
+            Featured Destinations
+          </h2>
+
+          <!-- Visitors can open the full destination list. -->
+          <a class="view-all" href="explore.html">
+            View All →
+          </a>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+          <!-- DESTINATION 1: NUMBER TWO BEACH -->
+
+          <article class="destination-card">
+
+            <img src="images/number2.jpg" alt="Number 2 Beach with white sand and turquoise water" loading="lazy">
+
+            <div class="destination-info">
+
+              <h3>
+                Number 2 Beach
+              </h3>
+
+              <p>
+                Western Area Peninsula
+              </p>
+
+              <!-- This link needs a matching ID
+                   inside explore.html. -->
+              <a href="explore.html#river-number-two">
+                Learn More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!--TACUGAMA SANCTUARY -->
+
+          <article class="destination-card">
+
+            <img src="images/tacugama.jpg" alt="Entrance to Tacugama Chimpanzee Sanctuary" loading="lazy">
+
+            <div class="destination-info">
+
+              <h3>
+                Tacugama Sanctuary
+              </h3>
+
+              <p>
+                Western Area
+              </p>
+
+              <a href="explore.html#tacugama">
+                Learn More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- DESTINATION 3: BUNCE ISLAND -->
+
+          <article class="destination-card">
+
+            <img src="images/bunce-island.jpg" alt="Historic Bunce Island in Sierra Leone" loading="lazy">
+
+            <div class="destination-info">
+
+              <h3>
+                Bunce Island
+              </h3>
+
+              <p>
+                Sierra Leone River
+              </p>
+
+              <a href="explore.html#bunce-island">
+                Learn More →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--FOOTER-->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <strong>
+          TourSalone
+        </strong>
+
+        <p class="footer-note">
+          Discover. Explore. Experience Sierra Leone.
+        </p>
+
+        <p class="footer-note">
+          © 2026 TourSalone. All rights reserved.
+        </p>
+
+      </div>
+
+
+      <!-- Second column: links to the other pages. -->
+      <div class="footer-links">
+
+        <strong>
+          Quick Links
+        </strong>
+
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+
+      <!-- Third column: newsletter preview. We have not connected this to a database
+           or email service, so the input is disabled.
+           This avoids making visitors think their
+           email address has been submitted. -->
+      <div class="newsletter">
+
+        <strong>
+          Newsletter
+        </strong>
+
+        <p class="footer-note">
+          Stay connected for future travel updates.
+        </p>
+
+        <input type="email" placeholder="Your email address" aria-label="Newsletter email address" disabled>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

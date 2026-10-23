@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | TourSalone</title>
+
+  <!-- The font and stylesheet used across our website. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- The same navigation is used on all our pages. -->
+  <header>
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">TOURSALONE</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Our contact page has two columns, just as
+         shown in the original wireframe. -->
+    <section class="contact-wireframe-section">
+
+      <div class="container contact-wireframe-layout">
+
+        <!-- LEFT SIDE: Contact details -->
+        <div class="contact-wireframe-info">
+
+          <h1>Contact Us</h1>
+
+          <p class="contact-wireframe-description">
+            Have a question about Sierra Leone or need
+            more information about a destination?
+            Feel free to contact TourSalone.
+          </p>
+
+          <!-- We will add the complete phone number
+               when it is available. -->
+          <div class="contact-wireframe-item">
+            <span class="contact-wireframe-icon" aria-hidden="true">☎</span>
+
+            <div>
+              <h3>Phone Number</h3>
+              <p>+232 — Coming soon</p>
+            </div>
+          </div>
+
+          <!-- Visitors can use the form to send an
+               enquiry until our public email is ready. -->
+          <div class="contact-wireframe-item">
+            <span class="contact-wireframe-icon" aria-hidden="true">✉</span>
+
+            <div>
+              <h3>Email</h3>
+              <p>Contact email coming soon</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE: Message form
+
+             We use FormSubmit so the form can send
+             messages without JavaScript.
+
+             Replace YOUR_EMAIL@example.com with the
+             email address receiving the messages. -->
+        <div class="contact-wireframe-form-box">
+
+          <h2>Send Us a Message</h2>
+
+          <form
+            class="contact-wireframe-form"
+            action="https://formsubmit.co/YOUR_EMAIL@example.com"
+            method="POST"
+          >
+
+            <!-- These settings help FormSubmit
+                 organise and protect our messages. -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New TourSalone Contact Message"
+            >
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="true"
+            >
+
+            <!-- Visitor's name -->
+            <label for="visitor-name">Your Name</label>
+
+            <input
+              type="text"
+              id="visitor-name"
+              name="name"
+              placeholder="Your Name"
+              required
+            >
+
+            <!-- Email helps us reply to the visitor.
+                 This is an extra field added for usability. -->
+            <label for="visitor-email">Your Email</label>
+
+            <input
+              type="email"
+              id="visitor-email"
+              name="email"
+              placeholder="Your Email"
+              required
+            >
+
+            <!-- Subject dropdown from our wireframe -->
+            <label for="visitor-subject">Subject</label>
+
+            <select
+              id="visitor-subject"
+              name="subject"
+              required
+            >
+              <option value="" disabled selected>
+                Select Subject
+              </option>
+
+              <option value="Destination Information">
+                Destination Information
+              </option>
+
+              <option value="Travel Planning">
+                Travel Planning
+              </option>
+
+              <option value="Accommodation">
+                Accommodation
+              </option>
+
+              <option value="General Enquiry">
+                General Enquiry
+              </option>
+            </select>
+
+            <!-- Visitors write their questions here. -->
+            <label for="visitor-message">Your Message</label>
+
+            <textarea
+              id="visitor-message"
+              name="message"
+              rows="6"
+              placeholder="Your message..."
+              required
+            ></textarea>
+
+            <!-- FormSubmit handles the submission and
+                 displays its confirmation afterwards. -->
+            <button type="submit" class="btn contact-send-btn">
+              Send Message →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Four footer sections from the wireframe. -->
+  <footer>
+    <div class="container contact-footer-grid">
+
+      <div>
+        <strong>TourSalone</strong>
+        <p class="footer-note">
+          Discover. Explore. Experience Sierra Leone.
+        </p>
+        <p class="footer-note">© 2026 TourSalone</p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Follow Us</strong>
+        <p class="footer-note">
+          Social media pages coming soon.
+        </p>
+      </div>
+
+      <div class="newsletter">
+        <strong>Newsletter</strong>
+        <p class="footer-note">
+          Travel updates coming soon.
+        </p>
+
+        <input
+          type="email"
+          placeholder="Your email"
+          aria-label="Newsletter email"
+          disabled
+        >
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
