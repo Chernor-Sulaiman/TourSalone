@@ -62,7 +62,7 @@ The Contact page provides contact information and a message form for visitors wh
 ![TourSalone About Page](screenshot/about.png)
 
 ### 4. Services Page
-![TourSalone Services Page](screenshot/services.png)
+![TourSalone Services Page](screenshot/service.png)
 
 ### 5. Contact Page
 ![TourSalone Contact Page](screenshot/contact.png)
